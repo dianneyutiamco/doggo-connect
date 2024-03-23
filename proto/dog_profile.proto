@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package dog_profile;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/dianneyutiamco/doggo-connect/internal/api/dog_profile";
+
+
+message DogProfile {
+    string name = 1;
+}
+
+service DogProfileService {
+    rpc CreateDogProfile (DogProfile) returns (google.protobuf.Empty);
+}
+
